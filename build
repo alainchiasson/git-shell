@@ -5,4 +5,4 @@ set -e
 # allows easy predictable paths everywhere in build chain
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
-docker build -t alainchiasson/workstation-pod:latest .
+docker build -t alainchiasson/git-shell:local .
