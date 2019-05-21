@@ -9,7 +9,8 @@ RUN yum update -y && \
 
 # This key is generated from git.
 # TODO: either refresh in repo or when building Image
-COPY .ssh /home/jenkins/.ssh
+# COPY .ssh /home/jenkins/.ssh
+RUN ssh-keyscan github.com > /home/jenkins/.ssh/known_hosts
 
 USER jenkins
 WORKDIR /home/jenkins
