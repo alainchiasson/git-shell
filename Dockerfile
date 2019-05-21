@@ -1,9 +1,9 @@
-FROM centos:7
+FROM fedora:29
 
 RUN adduser jenkins -u 1000
 
 RUN yum update -y && \
-    yum install -y git openssh-client &&\
+    yum install -y git openssh-clients &&\
     yum clean all && \
     rm -rf /var/cache/yum
 
